@@ -9,6 +9,9 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
+# --- Native Installs (e.g. Claude) ---
+export PATH="$HOME/.local/bin:$PATH"
+
 # --- Ruby ---
 
 # Use rbenv instead of local ruby
