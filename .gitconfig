@@ -14,7 +14,9 @@
 	lpn = log --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset - %C(magenta)%cn%Creset' --abbrev-commit --date=relative -n
 	lpd = log --pretty=format:'%Cgreen%cd%Creset %Cred%h%Creset %C(yellow)%d%Creset %s' --abbrev-commit --date=short
 	logg = log --grep
-	log-tree= log --graph --oneline --decorate --all
+	log-tree = log --graph --oneline --decorate --all
+	remove-merged = "!git branch --merged main --format='%(refname:short)' | grep -v '^main$' | xargs -n 1 git branch -d"
+
 [color]
 	ui = always
 [commit]
