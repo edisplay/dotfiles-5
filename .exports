@@ -1,6 +1,9 @@
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# Paint full-screen repaints from the top instead of scrolling up from the bottom
+export LESS="-c"
+
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
